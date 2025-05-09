@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Attendance - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@heroicons/vue@2.0.13/dist/heroicons.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+    <div class="fixed top-0 w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-3 shadow-lg z-10">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-xl font-bold">RFID Attendance System</h1>
+        </div>
+    </div>
+
+    <main class="flex items-center justify-center min-h-screen px-4">
+        <div class="card bg-white p-6 rounded-2xl shadow-sm w-full max-w-md animate-fade-in">
+            <h2 class="text-lg font-bold text-gray-800 mb-4 text-center">Login</h2>
+            <div class="space-y-4">
+                <div>
+                    <label for="loginName" class="block text-sm font-medium text-gray-500 mb-1">Name (e.g., zoz (306BA956))</label>
+                    <input type="text" id="loginName" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter name with UID">
+                </div>
+                <div>
+                    <label for="loginUID" class="block text-sm font-medium text-gray-500 mb-1">UID</label>
+                    <input type="text" id="loginUID" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter UID">
+                </div>
+                <button id="loginButton" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 hover:scale-105 transition flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14"></path></svg>
+                    Login
+                </button>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-red-100 text-red-600 px-4 py-2 rounded-lg shadow-md hidden"></div>
+    </main>
+
+    <script src="../src/js/pages/login.js" type="module"></script></body>
+</html>
